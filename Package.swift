@@ -272,7 +272,10 @@ let package = Package(
     .target(
       name: "FirebaseAnalyticsSwift",
       dependencies: ["FirebaseAnalyticsWrapper"],
-      path: "FirebaseAnalyticsSwift/Sources"
+      path: "FirebaseAnalyticsSwift/Sources",
+      linkerSettings: [
+        .linkedFramework("SwiftUI"),
+      ]
     ),
 
     .target(
